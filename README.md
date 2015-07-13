@@ -12,8 +12,29 @@ dom解析占用内存大，也需要引入第三方库，所以使用相对于�
 ## 使用
 
 <br>
-**开始解析：**
+**abstract class SaxParser需要子类实现的方法：**
     
+    /**
+     * 节点解析开始
+     */
+    public abstract void parserStart(Attributes attributes);
+    /**
+     * 一个子节点解析结束
+     * @param value characters获得的值
+     */
+    public abstract void parserElementEnd(String qName, String value);
+    /**
+     * 解析事件需要向下传递，返回需要传递的子SaxParser
+     */
+    public abstract SaxParser dispatchTo(String qName, Attributes attributes);
+    /**
+     * 节点解析结束
+     */
+    public abstract void parserEnd();
+
+<br>
+**开始解析：**
+    根节点kml，根节点解析器KmlParser:
     SaxParser.start(getAssets().open("test.kml"), "kml", new Kml.KmlParser(kml));
 
 <br>
