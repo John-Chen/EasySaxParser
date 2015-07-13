@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2">
+
+  <Document id="123">
+    <description>abc</description>
+    <author>csq</author>
+    <ExtendedData>
+      <Data name="TrackId">
+        <value>293156</value>
+      </Data>
+      <Data name="TrackTypeId">
+        <value>8</value>
+      </Data>
+    </ExtendedData>
+
+    <Placemark>
+      <name>深圳湾公园</name>
+      <TimeStamp>
+        <when>2015-03-21T10:00:13Z</when>
+      </TimeStamp>
+      <Point>
+        <coordinates>113.93946,22.48955,9.0</coordinates>
+      </Point>
+    </Placemark>
+
+  </Document>
+
+</kml>
